@@ -310,14 +310,21 @@ exercicio_06_split4_main();
 Durante a execução, o terminal deve exibir logs semelhantes a:
 
 ```text
-[SENSORES] [LEITURA] nivel=...
-[CONTROLE] [DECISAO] bomba=...
-[ATUADOR] [COMANDO] bomba=...
-[EMERGENCIA] botao de emergencia pressionado
-[SUPERVISAO] [MODO_SEGURO] causa=emergencia externa
-[SUPERVISAO] [AGUARDANDO_RESET] sistema bloqueado
-[RESET] operador confirmou reset
-[SUPERVISAO] [RESET] reset confirmado - sistema retornou ao modo NORMAL
+Projeto - Simulacao de tanque industrial
+Sprint 4 - Concorrencia, Sincronizacao, Eventos e Modo Seguro
+[Tick 1] [CONTROLE] [DECISAO] bomba=OFF aquecedor=ON valvula=FECHADA alarme=OFF
+[Tick 1] [ATUADOR] [COMANDO] bomba=OFF aquecedor=ON valvula=FECHADA alarme=OFF motivo=-
+[Tick 1] [SENSORES] [LEITURA] nivel=50.7 temp=25.3 pressao=2.27
+[Tick 1001] [CONTROLE] [DECISAO] bomba=OFF aquecedor=ON valvula=FECHADA alarme=OFF
+[Tick 1001] [ATUADOR] [COMANDO] bomba=OFF aquecedor=ON valvula=FECHADA alarme=OFF motivo=-
+[Tick 1001] [SENSORES] [LEITURA] nivel=51.4 temp=25.6 pressao=2.28
+[Tick 2001] [CONTROLE] [DECISAO] bomba=OFF aquecedor=ON valvula=FECHADA alarme=OFF
+[Tick 2001] [ATUADOR] [COMANDO] bomba=OFF aquecedor=ON valvula=FECHADA alarme=OFF motivo=-
+[Tick 2001] [SENSORES] [LEITURA] nivel=52.1 temp=25.9 pressao=2.30
+[Tick 3001] [SUPERVISAO] [FALHA_SENSOR] timeout - sem leituras
+[Tick 3001] [SUPERVISAO] [MODO_SEGURO] causa=falha de sensor - timeout
+[Tick 3001] [SUPERVISAO] [AGUARDANDO_RESET] sistema bloqueado aguardando reset
+[Tick 3001] [ATUADOR] [COMANDO] bomba=OFF aquecedor=OFF valvula=ABERTA alarme=ON motivo=MODO_SEGURO
 ```
 
 Esses logs comprovam:
