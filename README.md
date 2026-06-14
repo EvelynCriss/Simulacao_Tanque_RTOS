@@ -10,6 +10,7 @@ A implementação foi modularizada em múltiplos arquivos para facilitar manuten
 
 ---
 
+
 ## Organização dos Arquivos
 
 | Arquivo | Função |
