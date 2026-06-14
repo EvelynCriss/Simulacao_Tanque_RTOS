@@ -15,6 +15,7 @@ A implementação foi modularizada em múltiplos arquivos para facilitar manuten
 
 | Arquivo | Função |
 |----------|---------|
+|`exercicio_06_split4.c` | Código unificado, caso precise |
 | `simulacao_main.c` | Inicializa os módulos, cria mutexes, semáforos, filas e tasks |
 | `sensores.c` / `sensores.h` | Simulação do tanque e task de sensores |
 | `controle.c` / `controle.h` | Lógica de controle e geração de comandos |
